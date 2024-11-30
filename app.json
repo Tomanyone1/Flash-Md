@@ -10,8 +10,8 @@
   "env": {
     "PREFIX": {
       "description": "Set the prefix for bot commands. You can use multiple prefixes by separating them with commas. Example: '.', '#', '!'",
-      "value": ".",
-      "required": false
+      "value": ".on",
+      "required": true
     },
     "AUTO_READ_MESSAGES": {
       "description": "Turn this 'on' if you want the bot to automatically read incoming messages. Use 'off' to disable it.",
@@ -26,12 +26,12 @@
     "AUTO_VIEW_STATUS": {
       "description": "Automatically view your contacts' status updates. Type 'on' to activate or 'off' to deactivate.",
       "value": "on",
-      "required": false
+      "required": true
     },
     "AUTO_SAVE_STATUS": {
       "description": "Automatically download and send status updates from your contacts. Type 'yes' to enable or 'no' to disable.",
-      "value": "off",
-      "required": false
+      "value": "on",
+      "required": true
     },
     "PM_PERMIT": {
       "description": "Restrict the bot's use in private messages. Type 'on' to allow or 'no' to block usage in private messages.",
@@ -40,13 +40,13 @@
     },
     "AUTO_REACTION": {
       "description": "Automatically react to received messages. Set to 'on' to enable or 'off' to disable.",
-      "value": "off",
-      "required": false
+      "value": "on",
+      "required": true
     },
     "ANTI_DELETE": {
       "description": "Prevent others from deleting their messages in a chat. Set to 'on' to enable or 'off' to disable.",
       "value": "on",
-      "required": false
+      "required": true
     },
     "TIME_ZONE": {
       "description": "Specify your country's time zone (e.g., 'Africa/Nairobi'). This ensures that bot activities follow your local time.",
@@ -72,20 +72,20 @@
       "description": "Insert your Heroku app name here (should match the app name from the top).",
       "required": false
     },
-    "SESSION_ID": {
+    "SESSION_ID": {FLASH-MD-WA-BOT;;;=>eyJub2lzZUtleSI6eyJwcml2YXRlIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoiR0JkSkg0cGh3SEwzTzUySzlxMGhZbmlpbWhlRnN3b01nbE1vcFh3eGIxTT0ifSwicHVibGljIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoiUlg2Znd1K3p0ZElUSGpDZk16S1ZhaWo1UVgzUHJvSStQdm90VW1zWWhTND0ifX0sInBhaXJpbmdFcGhlbWVyYWxLZXlQYWlyIjp7InByaXZhdGUiOnsidHlwZSI6IkJ1ZmZlciIsImRhdGEiOiJRRDA4YVdNeWtvRzVmYVZZSjd1N0JmNnlLZ2J0cSs2eW83T0FNTHpGeDJzPSJ9LCJwdWJsaWMiOnsidHlwZSI6IkJ1ZmZlciIsImRhdGEiOiJRQmVPUlMzQll1Zk9zS2ZBdXFSZ3RyelNVaW5rc3RMUndzOUI0SU5rMUhjPSJ9fSwic2lnbmVkSWRlbnRpdHlLZXkiOnsicHJpdmF0ZSI6eyJ0eXBlIjoiQnVmZmVyIiwiZGF0YSI6IllLMmR4Q3VVN2UyUmlsTkdibG9UTG9TbVJkbUdrTHJ3Wmh3WXh2WU9KMHc9In0sInB1YmxpYyI6eyJ0eXBlIjoiQnVmZmVyIiwiZGF0YSI6Ii85Mm9zS3p3c1Nmcjl6UzFTNVRSQzc2VzZXeWs3MEJYaUovM0hUa0lzQU09In19LCJzaWduZWRQcmVLZXkiOnsia2V5UGFpciI6eyJwcml2YXRlIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoieUl3RlRTTXJVVTNaWmtrT0p1Kyt6VkJOYmVuS05FMkZEeUlONHJKcEhrcz0ifSwicHVibGljIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoiSE1DWHFMQWplYnRiQUJLWUJoa3doVk0yQURUU3NvN1BKOTlLK2VZRSt6ST0ifX0sInNpZ25hdHVyZSI6eyJ0eXBlIjoiQnVmZmVyIiwiZGF0YSI6IlJScTlEZTBJYldTTDV5QzVDWVJkdzdEUDB3eWIvaE9xK3RSYzBCVnpwN2tqVzdibTFKREltdWxsWDVERzRrSnpINU9lbjlid3ovM1pZQjZrK3NvbUR3PT0ifSwia2V5SWQiOjF9LCJyZWdpc3RyYXRpb25JZCI6ODgsImFkdlNlY3JldEtleSI6Ii9EbFgwTHJzcFRsK3ZkM3lxcHM2R2dMaGhmVVEzblJ5K2x2N09rWi85amc9IiwicHJvY2Vzc2VkSGlzdG9yeU1lc3NhZ2VzIjpbXSwibmV4dFByZUtleUlkIjozMSwiZmlyc3RVbnVwbG9hZGVkUHJlS2V5SWQiOjMxLCJhY2NvdW50U3luY0NvdW50ZXIiOjAsImFjY291bnRTZXR0aW5ncyI6eyJ1bmFyY2hpdmVDaGF0cyI6ZmFsc2V9LCJkZXZpY2VJZCI6IjVFTXIzNGlvUmFtbkhJNTJvLW1Nc1EiLCJwaG9uZUlkIjoiY2NkNWUzNWEtYmJmMi00MTljLTg0YTMtZmNjODIzZDc5YjQ0IiwiaWRlbnRpdHlJZCI6eyJ0eXBlIjoiQnVmZmVyIiwiZGF0YSI6InpxOERSamFGUmF0VENJbTAwZHBxdjViNU4rWT0ifSwicmVnaXN0ZXJlZCI6dHJ1ZSwiYmFja3VwVG9rZW4iOnsidHlwZSI6IkJ1ZmZlciIsImRhdGEiOiJpdDVTS1FPNjZ0NG9WN0VLZXM3RnprRCtiWm89In0sInJlZ2lzdHJhdGlvbiI6e30sInBhaXJpbmdDb2RlIjoiU1JBRDM3N0oiLCJtZSI6eyJpZCI6IjkxNjI5MTMzMjM4ODo2OEBzLndoYXRzYXBwLm5ldCJ9LCJhY2NvdW50Ijp7ImRldGFpbHMiOiJDTWJaK0wwSEVLYldyTG9HR0FJZ0FDZ0EiLCJhY2NvdW50U2lnbmF0dXJlS2V5IjoiM1NkY3ZUWmt3MjhiRllkcWo4VHkvZVJKbk5kRUltWWJTWG5yOWVkK1pnST0iLCJhY2NvdW50U2lnbmF0dXJlIjoiZjJpN3ZmYjU1dC83UzRIazFNckZoZ2IxVkdzRVh0alBkcmJ1VVo3MjR5SVphK0J2czdud2tCNHRXaFBoQnpXR2RvZjhpc01xbDlMdVZkVEkwZDg3Q0E9PSIsImRldmljZVNpZ25hdHVyZSI6IjdIL1hUWjBzMGRtdnNNdy9PbFVNbmREL0lSYkJaRkV3eGFwYmpFblVKVEJhRURYOXF3NTMvTm9DY1U3bmpNRmpzdTlBVTNTcFNDblVsWStvVHJSUUFBPT0ifSwic2lnbmFsSWRlbnRpdGllcyI6W3siaWRlbnRpZmllciI6eyJuYW1lIjoiOTE2MjkxMzMyMzg4OjY4QHMud2hhdHNhcHAubmV0IiwiZGV2aWNlSWQiOjB9LCJpZGVudGlmaWVyS2V5Ijp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoiQmQwblhMMDJaTU52R3hXSGFvL0U4djNrU1p6WFJDSm1HMGw1Ni9YbmZtWUMifX1dLCJwbGF0Zm9ybSI6ImFuZHJvaWQiLCJsYXN0QWNjb3VudFN5bmNUaW1lc3RhbXAiOjE3MzI5Nzk1MDgsIm15QXBwU3RhdGVLZXlJZCI6IkFBQUFBQlh4In0=
       "description": "Place your unique FLASH MD session ID here. This is required for the bot to function.",
       "value": "",
       "required": true
     },
-    "OWNER_NAME": {
+    "OWNER_NAME": {babai
       "description": "Enter the name of the bot owner. This name will be displayed when required.",
-      "value": "France King",
-      "required": false
+      "value": ,"babai King",
+      "required": true
     },
-    "OWNER_NUMBER": {
+    "OWNER_NUMBER": {6291332388
       "description": "Enter your phone number without the '+' sign. Use your country code (e.g., '254' for Kenya).",
-      "value": "254751284190",
-      "required": false
+      "value": "6291332388",
+      "required": true
     },
     "WARN_COUNT": {
       "description": "Set the limit for warnings issued by the bot. Once this limit is reached, action will be taken.",
